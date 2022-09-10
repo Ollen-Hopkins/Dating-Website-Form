@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Dating-website" content="Enter your information to get matched with your soul mate.">
+    <style>
+        label:hover {
+            color: rgb(4, 112, 148);
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Enter Your Details For Our Dating Website</h1>
+<form action="https://us-central1-nucamp-production.cloudfunctions.net/post/formdata" method="post" enctype="multipart/form-data">
+    <fieldset style="border-width: 5px; border-style: solid; border-color: blue; border-radius: 10px; background-color: lavender;">
+        <legend><button class="legends" style="border-style: none; background-color: purple; border-radius: 5px; color: white;">Your Face</button></legend>
+        <label for="avatar"> Upload Your Image</label>
+        <input type="file" name="avatar" id="avatar"><br>
+        <p >image preview: <img id="preview" width="500"> </p>
+    </fieldset>
+    <fieldset style="border-width: 5px; border-style: solid; border-color: blue; border-radius: 10px; background-color: lavender">
+        <legend><button class="legends" style="border-style: none; background-color: purple; border-radius: 5px; color: white;">Your Details</button></legend>
+        <label for="Name" style="margin-left: 107px;"> &nbsp;&nbsp;Name: </label>
+        <input type="text" name="name" id="Name" placeholder="Your full name" style="margin-top: 5px;"><br>
+        
+        <label for="Gender" style="margin-left: 106px;">Gender:</label>
+        <input type="radio" name="gender" id="Woman" style="margin-top: 5px;" value="Woman"> 
+        <label for="Woman">&nbsp; Woman</label>
+        <input type="radio" name="gender" id="Man" style="margin-top: 5px;" value="Man">
+        <label for="Man"> &nbsp;&nbsp; Man </label><br>
+
+        <label for="Age" style="margin-left: 126px;"> Age:</label>
+        <input type="text" name="age" id="Age" style="margin-top: 5px;"><br>
+
+        <label for="DateofBirth" style="margin-left: 68px;"> Date of Birth: </label>
+        <input type="date" name="dateOfBirth" id="DateofBirth" style="margin-top: 5px;"><br>
+
+        <label for="favoriteColor" style="margin-left: 59px;">Favorite Color:</label>
+        <input type="color" id="favoriteColor" style="margin-top: 5px;"><br>
+
+        <label for="Country" style="margin-left: 100px;"> Country: </label>
+        <select name="country" id="Country" style="margin-top: 5px;">
+            <option value="countries"> Please choose a country</option>
+            <option value="USA"> United States</option>
+            <option value="Russia"> Russia </option>
+            <option value="China"> China </option>
+        </select><br>
+        <label for="Salary" style="margin-left: 100px;">&nbsp;&nbsp; Salary:</label>
+        <button style="background-color: green; border-style: none; color: white;">Poor</button> 
+        <input type="range" id="Salary" name="salary" style="margin-top: 5px;"> 
+        <button style="background-color: green; border-style: none; color: white;">Rich</button>   
+
+    </fieldset>
+    <fieldset style="border-width: 5px; border-style: solid; border-color: blue; border-radius: 10px; background-color: lavender">
+        <legend><button class="legends" style="border-style: none; background-color: purple; border-radius: 5px; color: white;">Your Contact Information</button></legend>
+        <label for="Email" style="margin-left: 113.5px;">Email:&nbsp;&nbsp; </label>
+        <input type="email" id="Email" style="margin-top: 5px;"><br>
+
+        <label for="Phone" style="margin-left: 112px;"> Phone:&nbsp;&nbsp; </label>
+        <input type="number" id="Phone" style="margin-top: 5px;"><br>
+
+        <label for="Address" style="margin-left: 100px;" >Address: &nbsp;</label>
+        <textarea name="Address" id="Address" cols="22" rows="1" style="margin-top: 5px;"></textarea>
+    </fieldset>
+    <input type="submit">
+</form>
+<script src="https://url.nucamp.co/datingjs"></script>
+</body>
+</html>
